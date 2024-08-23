@@ -1,5 +1,6 @@
 import React from "react";
-import { ParallaxTilt } from "react-parallax-tilt"; // Update the import
+import ParallaxTilt from "react-parallax-tilt";
+// Update the import
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
