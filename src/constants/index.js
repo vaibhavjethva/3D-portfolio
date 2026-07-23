@@ -32,6 +32,8 @@ import {
   phplogo,
 } from "../assets";
 
+export const resumeUrl = "/Vaibhav_FullStack.pdf";
+
 export const navLinks = [
   {
     id: "about",
@@ -53,7 +55,7 @@ const services = [
     icon: web,
   },
   {
-    title: "React Js Developer",
+    title: "React Js & Next Js Developer",
     icon: mobile,
   },
   {
@@ -61,7 +63,7 @@ const services = [
     icon: backend,
   },
   {
-    title: "JS Developer",
+    title: "AI Assisted Developer",
     icon: js,
   },
 ];
@@ -123,15 +125,15 @@ const technologies = [
 
 const experiences = [
   {
-    title: "PHP Developer",
-    company_name: "iFlair Web Technologies",
+    title: "Software Developer",
+    company_name: "iFlair Web Technologies Pvt. Ltd.",
     icon: iflair,
     iconBg: "#FAF9F7",
     date: "January 2024 - Present",
     points: [
-      "Developing and maintaining web applications using React.js and Laravel frameworks.",
-      "Collaborating with teams including designers, product managers, and other developers to provide high-quality products.",
-      "Working with Frontend library React.Js to enhance performance of website and Backend using with laravel to enchance rapid development to deliver products.",
+      "Delivered end-to-end full-stack business modules, including frontend interfaces, backend APIs, authentication, databases, and deployment.",
+      "Improved application performance, reliability and security through debugging, optimization, Docker-based deployments, and secure authentication workflows.",
+      "Adopted AI-assisted engineering workflows using Cursor, OpenAI Codex, Claude Code and ChatGPT to accelerate feature development, debugging, refactoring, code reviews, and technical research while maintaining production-quality code.",
     ],
   },
   // {

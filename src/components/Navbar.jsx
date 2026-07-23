@@ -2,8 +2,11 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 import { styles } from "../styles";
-import { navLinks } from "../constants";
+import { navLinks, resumeUrl } from "../constants";
 import { logo, menu, close } from "../assets";
+
+const resumeButtonClassName =
+  "bg-tertiary py-3 px-8 rounded-xl outline-none text-white font-bold shadow-md shadow-primary hover:opacity-90 transition-opacity";
 
 const Navbar = () => {
   const [active, setActive] = useState("");
@@ -49,19 +52,29 @@ const Navbar = () => {
           </p>
         </Link>
 
-        <ul className="list-none hidden sm:flex flex-row gap-10">
-          {navLinks.map((nav) => (
-            <li
-              key={nav.id}
-              className={`${
-                active === nav.title ? "text-white" : "text-secondary"
-              } hover:text-white text-[18px] font-medium cursor-pointer`}
-              onClick={() => setActive(nav.title)}
-            >
-              <a href={`#${nav.id}`}>{nav.title}</a>
-            </li>
-          ))}
-        </ul>
+        <div className="hidden sm:flex items-center gap-10">
+          <ul className="list-none flex flex-row gap-10">
+            {navLinks.map((nav) => (
+              <li
+                key={nav.id}
+                className={`${
+                  active === nav.title ? "text-white" : "text-secondary"
+                } hover:text-white text-[18px] font-medium cursor-pointer`}
+                onClick={() => setActive(nav.title)}
+              >
+                <a href={`#${nav.id}`}>{nav.title}</a>
+              </li>
+            ))}
+          </ul>
+
+          <a
+            href={resumeUrl}
+            download
+            className={resumeButtonClassName}
+          >
+            Download Resume
+          </a>
+        </div>
 
         <div className="sm:hidden flex flex-1 justify-end items-center">
           <img
@@ -91,6 +104,17 @@ const Navbar = () => {
                   <a href={`#${nav.id}`}>{nav.title}</a>
                 </li>
               ))}
+
+              <li>
+                <a
+                  href={resumeUrl}
+                  download
+                  className={`${resumeButtonClassName} inline-block text-[16px]`}
+                  onClick={() => setToggle(false)}
+                >
+                  Download Resume
+                </a>
+              </li>
             </ul>
           </div>
         </div>
